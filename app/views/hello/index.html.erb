@@ -1,4 +1,6 @@
 <h1 class="display-4"><%= @title %></h1>
 <p><%= @msg %></p>
 
-<%= form_with (controller: "hello", action: "index") local
+<%= form_with url:"/hello/index", local:true do |f| %>
+  <%= f.submit %>
+<% end %>

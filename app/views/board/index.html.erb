@@ -1,0 +1,23 @@
+<h1>Board#index</h1>
+<p>Find me in app/views/board/index.html.erb</p>
+
+<%= form_with url:"hello/index" do |f| %>
+  <%= f.text_field :name %>
+  <%= f.email_field :mail %>
+  <% f.submit "保存" %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>メール</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @name %></td>
+      <td><%= @mail %></td>
+    </tr>
+  </tbody>
+</table>
