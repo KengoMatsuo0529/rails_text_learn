@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 get "/hello/index" => "hello#index"
 get "/hello/other" => "hello#other"
 
+get "people/add" => "people#add"
+post "people/add" => "people#create"
 resources :boards
   
 end

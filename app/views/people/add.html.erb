@@ -1,0 +1,6 @@
+<%= form_with url:people_add_path, local:true do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :age %>
+  <%= f.text_field :mail %>
+  <%= f.submit "保存" %>
+<% end %>
