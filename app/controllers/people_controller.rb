@@ -1,19 +1,18 @@
 class PeopleController < ApplicationController
 
-  def add
+layout "people"
+
+  def new
     @people = Person.new
   end
   
-  def create
-    @people = Person.create
-    @people.save
-    redirect_to "/people/index"
+  def find
+    @people = Person.where("age >= ?", params[:find])
   end
 
   def index
     @dates = Person.all
   end
-  
   
   def show
     @data = Person.find(params[:id])

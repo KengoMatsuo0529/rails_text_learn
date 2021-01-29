@@ -1,0 +1,26 @@
+<h1 class="display-4 text-primary">People#Find</h1>
+
+<%= form_with url:"/people/find", local:true do |f| %>
+<div class="form-group">
+  <label for="find">Find</label>
+  <%= f.text_field :"" , class: "form-control" %>
+</div>
+  <%= f.submit "クリック" %>
+<% end %>
+  
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Mail</th>
+    </tr>
+    <% @people.each do |people| %>
+    <tr>
+      <td><%= people.id %></td>
+      <td><%= people.name %></td>
+      <td><%= people.age %></td>
+      <td><%= people.mail %></td>
+    </tr>
+    <% end %>
+  </table>
